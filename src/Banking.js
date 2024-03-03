@@ -40,6 +40,7 @@ class Bank {
   }
 
   listCustomers(branch, includeTransactions) {
+    console.log(`Customers for branch ${branch.getName()}:`);
     branch.customers.forEach((customer) => {
       console.log(`Customer: ${customer.getName()}`);
       if (includeTransactions) {
@@ -76,10 +77,10 @@ class Branch {
     return false;
   }
 
-  addCustomerTransaction(branch, customerId, amount) {
+  addCustomerTransaction(customerId, amount) {
     const customer = this.findCustomerById(customerId);
     if (customer) {
-      return customer.addTransaction(customerId, amount);
+      return customer.addTransaction(amount);
     }
     return false;
   }
@@ -131,24 +132,27 @@ class Transaction {
   }
 }
 
+// Example usage:
+
 const arizonaBank = new Bank("Arizona");
 const westBranch = new Branch("West Branch");
 const sunBranch = new Branch("Sun Branch");
 const customer1 = new Customer("John", 1);
 const customer2 = new Customer("Anna", 2);
-const customer3 = new Customer("Nouf", 3);
+const customer3 = new Customer("Jonas", 3);
 
 arizonaBank.addBranch(westBranch);
-arizonaBank.addBranch(sunBranch);
+arizonaBank.addBranch(sunBranch); // Added the sunBranch correctly
 
 arizonaBank.addCustomer(westBranch, customer1);
 arizonaBank.addCustomer(westBranch, customer2);
 arizonaBank.addCustomer(sunBranch, customer3);
 
-arizonaBank.addCustomerTransaction(westBranch, customer1.getId(), 4000);
+arizonaBank.addCustomerTransaction(westBranch, customer1.getId(), 3000);
 arizonaBank.addCustomerTransaction(westBranch, customer2.getId(), 2000);
-arizonaBank.addCustomerTransaction(sunBranch, customer3.getId(), 5000);
-arizonaBank.addCustomerTransaction(sunBranch, customer2.getId(), 1000);
+arizonaBank.addCustomerTransaction(sunBranch, customer3.getId(), 3000);
+
+customer1.addTransaction(1000); // Corrected to add a positive transaction
 
 console.log("Customer 1 Balance:", customer1.getBalance()); // Logging customer balance
 
@@ -156,4 +160,4 @@ console.log("West Branch Customers:");
 arizonaBank.listCustomers(westBranch, true); // Logging West Branch customers
 
 console.log("Sun Branch Customers:");
-arizonaBank.listCustomers(sunBranch, true); // Logging Sun Branch customers
+arizonaBank.listCustomers(sunBranch, true);
