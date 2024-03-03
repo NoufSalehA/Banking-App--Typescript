@@ -1,0 +1,92 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "Fc0yZala0gyWIsoj1gqPI",
+      "type": "text",
+      "x": 747.86669921875,
+      "y": 36.133331298828125,
+      "width": 715.8237915039062,
+      "height": 45,
+      "angle": 0,
+      "strokeColor": "#ffffff",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 1462402403,
+      "version": 49,
+      "versionNonce": 181499629,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1709342098122,
+      "link": null,
+      "locked": false,
+      "text": "baby how do yo sleep when you lie to me",
+      "fontSize": 36,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 31,
+      "containerId": null,
+      "originalText": "baby how do yo sleep when you lie to me",
+      "lineHeight": 1.25
+    },
+    {
+      "id": "QWV4xcMzVKyJrziI5Lbmp",
+      "type": "arrow",
+      "x": 371.8666890462241,
+      "y": 51.466672261556,
+      "width": 335.33330281575513,
+      "height": 1.3333384195963447,
+      "angle": 0,
+      "strokeColor": "#ffffff",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 2
+      },
+      "seed": 938823565,
+      "version": 76,
+      "versionNonce": 249574915,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1709342103461,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          335.33330281575513,
+          -1.3333384195963447
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#000"
+  },
+  "files": {}
+}
