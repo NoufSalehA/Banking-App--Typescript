@@ -7,22 +7,14 @@ class Bank {
     this.branches = [];
   }
 
-  addBranch(branch: Branch): boolean {
-    if (!(branch instanceof Branch)) {
-      throw new Error("Invalid branch object.");
+  addBranch(branch:Branch) :boolean{
+    if (!this.branches.includes(branch)) {
+      this.branches.push(branch);
+      return true;
     }
-
-    if (!branch.getName()) {
-      throw new Error("Branch name is required.");
-    }
-
-    if (this.findBranchByName(branch.getName())) {
-      throw new Error("Branch name must be unique.");
-    }
-
-    this.branches.push(branch);
-    return true;
+    return false;
   }
+
 
   addCustomer(branch: Branch, customer: Customer): boolean {
     if (!branch.customers.includes(customer)) {
